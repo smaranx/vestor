@@ -159,11 +159,11 @@ const SwapPage: NextPageWithLayout = () => {
   return (
     <>
       <NextSeo title="Vesting" />
-      <Trade>
-        <div className="mx-auto w-full px-4 pt-8 pb-14 sm:px-3 sm:pb-5 sm:pt-6 lg:px-4 xl:px-2 2xl:px-0">
-          <div className="mb-8 grid grid-cols-1 gap-12 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              {/* File uploader 
+
+      <div className="mx-auto w-full px-4 pt-8 pb-14 sm:px-3 sm:pb-5 sm:pt-6 lg:px-4 xl:px-2 2xl:px-0">
+        <div className="mb-8 grid-cols-4 gap-6 lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            {/* File uploader 
             <div className="mb-8">
               <InputLabel title="Upload file" important />
               <Uploader />
@@ -200,24 +200,80 @@ const SwapPage: NextPageWithLayout = () => {
 
           <div className="hidden flex-col lg:flex">
             {/* NFT preview */}
-              <InputLabel title="Step 1" />
-              <div className="relative flex flex-grow flex-col overflow-hidden rounded-lg bg-white shadow-card transition-all duration-200 hover:shadow-large dark:bg-light-dark"></div>
-            </div>
-          </div>
 
+            <InputLabel title="Vesting Details" />
+            {/* <div className="relative flex flex-grow flex-col overflow-hidden rounded-lg bg-white shadow-card transition-all duration-200 hover:shadow-large dark:bg-light-dark"></div>*/}
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
           {/* Name */}
-          <div className="mb-4">
+          <div className="mb-8">
             <InputLabel title="Name" important />
             <Input type="text" placeholder="Item name" />
           </div>
-
           {/* Token Address */}
-          <div className="mb-4">
+          <div className="mb-8">
             <InputLabel title="Token Address" important />
             <Input type="text" placeholder="Item name" />
           </div>
-
-          {/* Description 
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          {/* Vesting Period */}
+          <div className="mb-8">
+            <InputLabel title="Vesting period" important />
+            <Input
+              min={0}
+              type="text"
+              inputClassName="spin-button-hidden"
+              placeholder="Vesting Period"
+            />
+          </div>
+          {/* Cliff Period */}
+          <div className="mb-8">
+            <InputLabel title="Cliff period" important />
+            <Input
+              min={0}
+              type="text"
+              inputClassName="spin-button-hidden"
+              placeholder="Cliff Period"
+            />
+          </div>
+          {/* Address */}
+          <div className="mb-8">
+            <InputLabel title="Address" important />
+            <Input type="text" placeholder="address" />
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          {/* Token Amount */}
+          <div className="mb-8">
+            <InputLabel title="Amount" important />
+            <Input type="text" placeholder="Token Amount" />
+          </div>
+          <div className="m-auto mb-8">
+            <InputLabel title="+" />
+            <Button
+              shape="rounded"
+              fullWidth={false}
+              className="m -auto uppercase"
+              //onClick={() => AddAmount()}
+            >
+              Add
+            </Button>
+          </div>
+          <div className="m-auto mb-8">
+            <InputLabel title="-" />
+            <Button
+              shape="rounded"
+              fullWidth={false}
+              className=" uppercase"
+              //onClick={() => AddAmount()}
+            >
+              Remove
+            </Button>
+          </div>
+        </div>{' '}
+        {/* Description 
         <div className="mb-8">
           <InputLabel
             title="Description"
@@ -302,17 +358,15 @@ const SwapPage: NextPageWithLayout = () => {
             </Listbox>
           </div>
                         </div>*/}
-
-          <Button
-            shape="rounded"
-            fullWidth={true}
-            className="uppercase"
-            onClick={() => goToSwapPage2()}
-          >
-            Next
-          </Button>
-        </div>
-      </Trade>
+        <Button
+          shape="rounded"
+          fullWidth={true}
+          className="uppercase"
+          //onClick={() => goToSwapPage2()}
+        >
+          Submit
+        </Button>
+      </div>
     </>
   );
 };
