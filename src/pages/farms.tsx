@@ -174,7 +174,7 @@ const FarmsPage: NextPageWithLayout = () => {
               multiplier={farm.multiplier}
             >
               <div className="mb-4 grid grid-cols-2 gap-4 sm:mb-6 sm:gap-6">
-                <input
+                {/*<input
                   type="number"
                   placeholder="0.0"
                   className="spin-button-hidden h-11 appearance-none rounded-lg border-solid border-gray-200 bg-body px-4 text-sm tracking-tighter text-gray-900 placeholder:text-gray-600 focus:border-gray-900 focus:shadow-none focus:outline-none focus:ring-0 dark:border-gray-700 dark:bg-gray-900 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-gray-600 sm:h-13"
@@ -183,13 +183,23 @@ const FarmsPage: NextPageWithLayout = () => {
                   type="number"
                   placeholder="0.0"
                   className="spin-button-hidden h-11 appearance-none rounded-lg border-solid border-gray-200 bg-body px-4 text-sm tracking-tighter text-gray-900 placeholder:text-gray-600 focus:border-gray-900 focus:shadow-none focus:outline-none focus:ring-0 dark:border-gray-700 dark:bg-gray-900 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-gray-600 sm:h-13"
-                />
+          />*/}
+                <div>Total No. of Token claimed :</div>
+                <br />
+                <div>No. of Tokens remaining in the contract :</div>
+                <br />
+                <div>Timing of tokens claimed by every investor :</div>
+                <br />
+                <div>Total no. of tokens remaining per investor :</div>
+                <br />
+                <div>Contract address of every vesting contract :</div>
+                <br />
               </div>
-              <ActiveLink href="/farms-2">
+              {/*<ActiveLink href="/farms-2">
                 <Button shape="rounded" fullWidth size="large">
                   APPROVE
                 </Button>
-              </ActiveLink>
+          </ActiveLink>*/}
             </FarmList>
           );
         })}
